@@ -1,0 +1,44 @@
+ScreenManager:
+    MainScreen:
+
+<MainScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+
+            orientation: "vertical"
+
+            canvas.before:
+                Color:
+                    rgba: app.theme_cls.primary_color
+                RoundedRectangle:
+                    radius: [0, 0, 20, 20]
+                    size: root.width, root.height
+                    pos: self.pos
+
+            MDLabel:
+                halign: "center"
+                text: "Welcome"
+                pos_hint: {"center_x": 0.5, "y": 0.5}
+        BoxLayout:
+            orientation: "vertical"
+
+
+        FloatLayout:
+            MDRoundFlatButton:
+                text: "Login"
+                pos_hint: {"center_x": 0.5, "y": 0.4}
+                size_hint_x: 0.9
+                size_hint_y: None
+                theme_text_color: 'Custom'
+                text_color: root.theme_cls.primary_color
+            MDRoundFlatButton:
+                text: "Sign In"
+                pos_hint: {"center_x": 0.5, "y": 0.1}
+                theme_text_color: 'Custom'
+                text_color: root.theme_cls.primary_color
+                size_hint_x: 0.9
+                size_hint_y: None
+
+
+
